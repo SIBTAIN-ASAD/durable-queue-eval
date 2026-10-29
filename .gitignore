@@ -1,0 +1,11 @@
+.venv/
+.runner/
+__pycache__/
+jobs/
+*.db
+*.db-shm
+*.db-wal
+
+work/
+results/
+validation/implementation-*/

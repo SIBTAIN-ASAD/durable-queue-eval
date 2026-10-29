@@ -1,0 +1,36 @@
+schema_version = "1.3"
+
+[task]
+name = "review/durable-queue"
+description = "Implement a durable SQLite work queue with transactional batches, dependencies, fenced leases, retries, and an audit log."
+authors = []
+keywords = ["python", "sqlite", "transactions", "concurrency", "job-queue"]
+
+[metadata]
+difficulty = "hard"
+category = "software-engineering"
+authorship = "AI-assisted development draft; human authorship and eligibility are not attested."
+difficulty_explanation = "Interacting transaction, retry, dependency, and process recovery invariants; difficulty has not been calibrated with solving agents."
+
+[agent]
+timeout_sec = 72000.0
+user = "agent"
+
+[verifier]
+environment_mode = "separate"
+timeout_sec = 300.0
+user = "root"
+
+[verifier.environment]
+cpus = 2
+memory_mb = 2048
+storage_mb = 4096
+
+[environment]
+build_timeout_sec = 600.0
+cpus = 2
+memory_mb = 2048
+storage_mb = 4096
+
+[[artifacts]]
+source = "/app/queue.py"
